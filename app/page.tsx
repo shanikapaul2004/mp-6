@@ -1,6 +1,7 @@
 'use client';
 
 import { useSession, signIn, signOut } from 'next-auth/react';
+import type { CSSProperties } from 'react';
 
 export default function Home() {
     const { data: session } = useSession();
@@ -40,7 +41,15 @@ export default function Home() {
     );
 }
 
-const styles = {
+const styles: {
+    container: CSSProperties;
+    card: CSSProperties;
+    title: CSSProperties;
+    highlight: CSSProperties;
+    subtitle: CSSProperties;
+    avatar: CSSProperties;
+    button: CSSProperties;
+} = {
     container: {
         backgroundColor: '#f5f7fa',
         color: '#222',
